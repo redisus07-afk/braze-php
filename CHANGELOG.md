@@ -1,5 +1,22 @@
 # Changelog
 
+## [3.0.1](https://github.com/braze-community/braze-php/compare/v3.0.0...v3.0.1) (2026-01-27)
+
+
+### Documentation
+
+* **lib:** update PHPDoc ([51f8adb](https://github.com/braze-community/braze-php/commit/51f8adb6c71ce1f5f97db34e4c68a46f5854b5ba))
+
+
+### Code Refactoring
+
+* **Client:** replace how query string parameters are encoded ([cec38f1](https://github.com/braze-community/braze-php/commit/cec38f179ea09f050e2b9b7e7362154938bc4e3e))
+
+
+### Build System
+
+* **composer:** bump jane-php from 7.10.2 to 7.10.4 ([fe242fc](https://github.com/braze-community/braze-php/commit/fe242fc167a11d874cc753a771f36a00138326db))
+
 ## [3.0.0](https://github.com/braze-community/braze-php/compare/v2.4.7...v3.0.0) (2025-12-24)
 
 
