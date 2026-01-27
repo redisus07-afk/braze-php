@@ -72,22 +72,19 @@ class GetContentBlocksInfo extends \Braze\Runtime\Client\BaseEndpoint implements
      * | `Content Block has been deleted—content not available` | This Content Block, though it may have existed earlier, has been deleted. |
      * | `Include Inclusion Data—error` | This parameter only accepts boolean values (true or false). Make sure the value for `include_inclusion_data` is not encapsulated in quotes (`""`), which causes the value to be sent as a string instead. See request headers for details. |
      *
-     * @param array $queryParameters {
-     *
-     * @var string $content_block_id (Required) String
+     * @param array{
+     *    "content_block_id"?: string, //(Required) String
      *
      * The Content Block identifier.
      *
      * You can find this by either listing Content Block information through an API call or going to the API Keys page, then scrolling to the bottom and searching for your Content Block API identifier.
-     * @var bool $include_inclusion_data (Optional) Boolean
+     *    "include_inclusion_data"?: bool, //(Optional) Boolean
      *
      * When set to `true`, the API returns back the Message Variation API identifier of campaigns and Canvases where this Content Block is included, to be used in subsequent calls. The results exclude archived or deleted campaigns or Canvases.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(array $queryParameters = [], array $headerParameters = [])
     {

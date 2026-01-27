@@ -150,11 +150,10 @@ class GetCatalogsByCatalogNameItem extends \Braze\Runtime\Client\BaseEndpoint im
      * | `catalog-not-found` | Check that the catalog name is valid. |
      * | `invalid-cursor` | Check that your `cursor` is valid. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(string $catalogName, array $headerParameters = [])
     {

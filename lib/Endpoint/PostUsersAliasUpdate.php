@@ -48,11 +48,10 @@ class PostUsersAliasUpdate extends \Braze\Runtime\Client\BaseEndpoint implements
      *
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(?\Braze\Model\UsersAliasUpdatePostBody $requestBody = null, array $headerParameters = [])
     {

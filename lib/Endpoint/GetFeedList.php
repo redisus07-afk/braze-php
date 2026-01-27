@@ -47,26 +47,23 @@ class GetFeedList extends \Braze\Runtime\Client\BaseEndpoint implements \Braze\R
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
+     * @param array{
+     *    "page"?: int, //(Optional) Integer
      *
-     * @var int $page (Optional) Integer
+     * The page of cards to return, defaults to 0 (returns the first set of up to 100).
+     *    "include_archived"?: bool, //(Optional) Boolean
      *
-     * The page of cards to return, defaults to 0 (returns the first set of up to 100)
-     * @var bool $include_archived (Optional) Boolean
-     *
-     * Whether or not to include archived cards, defaults to false
-     * @var string $sort_direction (Optional) String
+     * Whether or not to include archived cards, defaults to false.
+     *    "sort_direction"?: string, //(Optional) String
      *
      * - Sort creation time from newest to oldest: pass in the value `desc`.
      * - Sort creation time from oldest to newest: pass in the value `asc`.
      *
      * If `sort_direction` is not included, the default order is oldest to newest.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(array $queryParameters = [], array $headerParameters = [])
     {

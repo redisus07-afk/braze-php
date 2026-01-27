@@ -77,11 +77,10 @@ class PostV2SubscriptionStatusSet extends \Braze\Runtime\Client\BaseEndpoint imp
      *
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string-Type
-     * @var string
-     *                  }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(?\Braze\Model\V2SubscriptionStatusSetPostBody $requestBody = null, array $headerParameters = [])
     {

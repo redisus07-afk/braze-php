@@ -76,26 +76,23 @@ class GetSendsDataSeries extends \Braze\Runtime\Client\BaseEndpoint implements \
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
-     *
-     * @var string (Required) String
+     * @param array{
+     *    "campaign_id"?: string, //(Required) String
      *
      * See [Campaign API identifier](https://www.braze.com/docs/api/identifier_types/).
-     * @var string (Required) String
+     *    "send_id"?: string, //(Required) String
      *
      * See [Send API identifier](https://www.braze.com/docs/api/identifier_types/).
-     * @var int (Required) Integer
+     *    "length"?: int, //(Required) Integer
      *
      * Max number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive).
-     * @var string (Optional) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
+     *    "ending_at"?: string, //(Optional) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
      *
      * Date on which the data series should end. Defaults to time of the request.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string
-     *             }
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(array $queryParameters = [], array $headerParameters = [])
     {

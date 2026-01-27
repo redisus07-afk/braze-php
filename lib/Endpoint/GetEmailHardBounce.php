@@ -65,35 +65,32 @@ class GetEmailHardBounce extends \Braze\Runtime\Client\BaseEndpoint implements \
      *
      *  ```
      *
-     * @param array $queryParameters {
-     *
-     * @var string $start_date (Optional*) String in YYYY-MM-DD format
+     * @param array{
+     *    "start_date"?: string, //(Optional*) String in YYYY-MM-DD format
      *
      * Start date of the range to retrieve hard bounces, must be earlier than `end_date`. This is treated as midnight in UTC time by the API.
      *
      *You must provide either an `email` or a `start_date`, and an `end_date`.
-     * @var string $end_date (Optional*) String in YYYY-MM-DD format
+     *    "end_date"?: string, //(Optional*) String in YYYY-MM-DD format
      *
      * String in YYYY-MM-DD format. End date of the range to retrieve hard bounces. This is treated as midnight in UTC time by the API.
      *
      *You must provide either an `email` or a `start_date`, and an `end_date`.
-     * @var int $limit (Optional) Integer
+     *    "limit"?: int, //(Optional) Integer
      *
      * Optional field to limit the number of results returned. Defaults to 100, maximum is 500.
-     * @var int $offset (Optional) Integer
+     *    "offset"?: int, //(Optional) Integer
      *
-     * Optional beginning point in the list to retrieve from
-     * @var string $email (Optional*) String
+     * Optional beginning point in the list to retrieve from.
+     *    "email"?: string, //(Optional*) String
      *
      * If provided, we will return whether or not the user has hard bounced.
      *
      *You must provide either an `email` or a `start_date`, and an `end_date`.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(array $queryParameters = [], array $headerParameters = [])
     {

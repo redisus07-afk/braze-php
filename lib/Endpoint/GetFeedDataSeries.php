@@ -48,28 +48,25 @@ class GetFeedDataSeries extends \Braze\Runtime\Client\BaseEndpoint implements \B
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
-     *
-     * @var string $card_id (Required) String
+     * @param array{
+     *    "card_id"?: string, //(Required) String
      *
      * See [Card API identifier](https://www.braze.com/docs/api/identifier_types/).
      *
      * The `card_id` for a given card can be found in the **Settings > Setup and Testing > API Keys** page and on the card details page within your dashboard, or you can use the [News Feed List Endpoint](https://www.braze.com/docs/api/endpoints/export/news_feed/get_news_feed_cards/).
-     * @var int $length (Required) Integer
+     *    "length"?: int, //(Required) Integer
      *
      * Max number of units (days or hours) before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive).
-     * @var string $unit (Optional) String
+     *    "unit"?: string, //(Optional) String
      *
      * Unit of time between data points. Can be `day` or `hour`, defaults to `day`.
-     * @var string $ending_at (Optional) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
+     *    "ending_at"?: string, //(Optional) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
      *
      * Date on which the data series should end. Defaults to time of the request.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(array $queryParameters = [], array $headerParameters = [])
     {

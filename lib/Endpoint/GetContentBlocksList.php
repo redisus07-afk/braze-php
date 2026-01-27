@@ -80,26 +80,23 @@ class GetContentBlocksList extends \Braze\Runtime\Client\BaseEndpoint implements
      * | `Offset is invalid` | The `offset` parameter must be an integer greater than 0. |
      * | Offset must be greater than 0 | Change the `offset` parameter to an integer greater than 0. |
      *
-     * @param array $queryParameters {
-     *
-     * @var string $modified_after (Optional) String in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+     * @param array{
+     *    "modified_after"?: string, //(Optional) String in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
      *
      * Retrieve only content blocks updated at or after the given time.
-     * @var string $modified_before (Optional) String in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+     *    "modified_before"?: string, //(Optional) String in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
      *
      * Retrieve only content blocks updated at or before the given time.
-     * @var int $limit (Optional) Positive Number
+     *    "limit"?: int, //(Optional) Positive Number
      *
      * Maximum number of content blocks to retrieve. Default to 100 if not provided, with a maximum acceptable value of 1000.
-     * @var int $offset (Optional) Positive Number
+     *    "offset"?: int, //(Optional) Positive Number
      *
      * Number of content blocks to skip before returning rest of the templates that fit the search criteria.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(array $queryParameters = [], array $headerParameters = [])
     {

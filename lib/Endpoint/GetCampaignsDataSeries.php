@@ -200,25 +200,22 @@ class GetCampaignsDataSeries extends \Braze\Runtime\Client\BaseEndpoint implemen
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
-     *
-     * @var string $campaign_id (Required) String
+     * @param array{
+     *    "campaign_id"?: string, //(Required) String
      *
      * See [campaign API identifier](https://www.braze.com/docs/api/identifier_types/).
      *
      * The `campaign_id` for API campaigns can be found at **Settings > Setup and Testing > API Keys** and the **Campaign Details** page within your dashboard, or you can use the [List campaigns endpoint](https://www.braze.com/docs/api/endpoints/export/campaigns/get_campaigns/).
-     * @var int $length (Required) Integer
+     *    "length"?: int, //(Required) Integer
      *
      * Max number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive).
-     * @var string $ending_at (Optional) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
+     *    "ending_at"?: string, //(Optional) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
      *
      * Date on which the data series should end. Defaults to time of the request.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(array $queryParameters = [], array $headerParameters = [])
     {

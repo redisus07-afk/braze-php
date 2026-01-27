@@ -45,29 +45,26 @@ class GetSessionsDataSeries extends \Braze\Runtime\Client\BaseEndpoint implement
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
+     * @param array{
+     *    "length"?: int, //(Required) Integer
      *
-     * @var int $length (Required) Integer
-     *
-     * Max number of days before `ending_at` to include in the returned series - must be between 1 and 100 (inclusive)
-     * @var string $unit (Optional) String
+     * Max number of days before `ending_at` to include in the returned series - must be between 1 and 100 (inclusive).
+     *    "unit"?: string, //(Optional) String
      *
      * Unit of time between data points. Can be `day` or `hour`, defaults to `day`.
-     * @var string $ending_at (Optional) Datetime (ISO 8601 string)
+     *    "ending_at"?: string, //(Optional) Datetime (ISO 8601 string)
      *
      * Date on which the data series should end. Defaults to time of the request.
-     * @var string $app_id (Optional) String
+     *    "app_id"?: string, //(Optional) String
      *
      * App API identifier retrieved from the [API Keys](https://www.braze.com/docs/user_guide/administrative/app_settings/api_settings_tab/) page to limit analytics to a specific app.
-     * @var string $segment_id (Required) String
+     *    "segment_id"?: string, //(Required) String
      *
      * See [Segment API identifier](https://www.braze.com/docs/api/identifier_types/). Segment ID indicating the analytics-enabled segment for which sessions should be returned.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(array $queryParameters = [], array $headerParameters = [])
     {

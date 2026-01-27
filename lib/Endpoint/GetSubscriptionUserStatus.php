@@ -39,31 +39,28 @@ class GetSubscriptionUserStatus extends \Braze\Runtime\Client\BaseEndpoint imple
      *
      *  ```
      *
-     * @param array $queryParameters {
-     *
-     * @var string $external_id (Required) String
+     * @param array{
+     *    "external_id"?: string, //(Required) String
      *
      * The `external_id` of the user. Must include at least one and at most 50 `external_ids`.
      *
      * If there are multiple users (multiple `external_ids`) who share the same email address, all users will be returned as a separate user (even if they have the same email address or subscription group).
-     * @var string $email (Required) String
+     *    "email"?: string, //(Required) String
      *
      * The email address of the user, can be passed as an array of strings. Must include at least one email address (with a maximum of 50).
-     * @var int $limit (Optional) Integer
+     *    "limit"?: int, //(Optional) Integer
      *
      * The limit on the maximum number of results returned. Default (and maximum) limit is 100.
-     * @var int $offset (Optional) Integer
+     *    "offset"?: int, //(Optional) Integer
      *
-     * Number of templates to skip before returning the rest of the templates that fit the search criteria
-     * @var string $phone (Required*) String in [E.164](https://en.wikipedia.org/wiki/E.164) format
+     * Number of templates to skip before returning the rest of the templates that fit the search criteria.
+     *    "phone"?: string, //(Required*) String in [E.164](https://en.wikipedia.org/wiki/E.164) format
      *
      * The phone number of the user. Must include at least one phone number (with a maximum of 50).
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(array $queryParameters = [], array $headerParameters = [])
     {

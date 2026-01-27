@@ -57,11 +57,10 @@ class PostMessagesSend extends \Braze\Runtime\Client\BaseEndpoint implements \Br
      *
      * Message sending endpoint responses will include the message’s `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the ID of the message dispatch, meaning the unique ID for each “transmission” sent from Braze. For more information, refer to [Dispatch ID behavior](https://www.braze.com/docs/help/help_articles/data/dispatch_id/).
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(?\Braze\Model\MessagesSendPostBody $requestBody = null, array $headerParameters = [])
     {

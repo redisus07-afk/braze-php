@@ -64,10 +64,9 @@ class GetPreferenceCenterV1ByPreferenceCenterExternalID extends \Braze\Runtime\C
      *
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(string $preferenceCenterExternalID, array $headerParameters = [])
     {

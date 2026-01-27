@@ -31,11 +31,10 @@ class PostMessagesScheduleDelete extends \Braze\Runtime\Client\BaseEndpoint impl
      * | --- | --- | --- | --- |
      * | `schedule_id` | Required | String | The schedule_id to delete (obtained from the response to create schedule). |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(?\Braze\Model\MessagesScheduleDeletePostBody $requestBody = null, array $headerParameters = [])
     {

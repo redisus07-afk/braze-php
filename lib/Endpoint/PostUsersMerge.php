@@ -160,11 +160,10 @@ class PostUsersMerge extends \Braze\Runtime\Client\BaseEndpoint implements \Braz
      * | `identifiers must be objects with an 'external_id' property that is a string, or 'user_alias' property that is an object` | Check the identifiers in your request. |
      * | `'merge_updates' must only have 'identifier_to_merge' and 'identifier_to_keep'` | Check that `merge_updates` only contains the two objects `identifier_to_merge` and `identifier_to_keep`. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(?\Braze\Model\UsersMergePostBody $requestBody = null, array $headerParameters = [])
     {

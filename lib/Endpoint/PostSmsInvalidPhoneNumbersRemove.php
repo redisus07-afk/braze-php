@@ -45,11 +45,10 @@ class PostSmsInvalidPhoneNumbersRemove extends \Braze\Runtime\Client\BaseEndpoin
      *
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     * @var string $Content-Type
-     *             }
+     * @param array{
+     *    "Authorization"?: string,
+     *    "Content-Type"?: string,
+     * } $headerParameters
      */
     public function __construct(?\Braze\Model\SmsInvalidPhoneNumbersRemovePostBody $requestBody = null, array $headerParameters = [])
     {

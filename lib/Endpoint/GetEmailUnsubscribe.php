@@ -67,32 +67,29 @@ class GetEmailUnsubscribe extends \Braze\Runtime\Client\BaseEndpoint implements 
      *
      *  ```
      *
-     * @param array $queryParameters {
-     *
-     * @var string $start_date (Optional*) String in YYYY-MM-DD format
+     * @param array{
+     *    "start_date"?: string, //(Optional*) String in YYYY-MM-DD format
      *
      * Start date of the range to retrieve unsubscribes, must be earlier than end_date. This is treated as midnight in UTC time by the API.
-     * @var string $end_date (Optional*)  String in YYYY-MM-DD format
+     *    "end_date"?: string, //(Optional*)  String in YYYY-MM-DD format
      *
      * End date of the range to retrieve unsubscribes. This is treated as midnight in UTC time by the API.
-     * @var int $limit (Optional) Integer
+     *    "limit"?: int, //(Optional) Integer
      *
      * Optional field to limit the number of results returned. Limit must be greater than 1. Defaults to 100, maximum is 500.
-     * @var int $offset (Optional) Integer
+     *    "offset"?: int, //(Optional) Integer
      *
-     * Optional beginning point in the list to retrieve from
-     * @var string $sort_direction (Optional) String
+     * Optional beginning point in the list to retrieve from.
+     *    "sort_direction"?: string, //(Optional) String
      *
      * Pass in the value `asc` to sort unsubscribes from oldest to newest. Pass in `desc` to sort from newest to oldest. If sort_direction is not included, the default order is newest to oldest.
-     * @var string $email (Optional*) String
+     *    "email"?: string, //(Optional*) String
      *
      * If provided, we will return whether or not the user has unsubscribed.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(array $queryParameters = [], array $headerParameters = [])
     {

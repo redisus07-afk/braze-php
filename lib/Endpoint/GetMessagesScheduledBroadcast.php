@@ -47,17 +47,14 @@ class GetMessagesScheduledBroadcast extends \Braze\Runtime\Client\BaseEndpoint i
      *
      *  ```
      *
-     * @param array $queryParameters {
-     *
-     * @var string $end_time (Required) String in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
+     * @param array{
+     *    "end_time"?: string, //(Required) String in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
      *
      * End date of the range to retrieve upcoming scheduled Campaigns and Canvases. This is treated as midnight in UTC time by the API.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(array $queryParameters = [], array $headerParameters = [])
     {

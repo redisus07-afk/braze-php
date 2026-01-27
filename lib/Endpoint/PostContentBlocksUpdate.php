@@ -92,11 +92,10 @@ class PostContentBlocksUpdate extends \Braze\Runtime\Client\BaseEndpoint impleme
      * | `All tags must be strings` | Make sure your tags are encapsulated in quotes (`""`). |
      * | `Some tags could not be found` | To add a tag when creating a Content Block, the tag must already exist in Braze. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(?\Braze\Model\ContentBlocksUpdatePostBody $requestBody = null, array $headerParameters = [])
     {

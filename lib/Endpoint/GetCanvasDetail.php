@@ -86,17 +86,14 @@ class GetCanvasDetail extends \Braze\Runtime\Client\BaseEndpoint implements \Bra
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://desktop.postman.com/?desktopVersion=9.19.0&userId=16580579&teamId=409325).
      *
-     * @param array $queryParameters {
-     *
-     * @var string $canvas_id (Required) String
+     * @param array{
+     *    "canvas_id"?: string, //(Required) String
      *
      * See [Canvas API Identifier](https://www.braze.com/docs/api/identifier_types/)
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(array $queryParameters = [], array $headerParameters = [])
     {

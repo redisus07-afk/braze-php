@@ -80,11 +80,10 @@ class PostSubscriptionStatusSet extends \Braze\Runtime\Client\BaseEndpoint imple
      *
      * > The endpoint only accepts the `email` or `phone` value, not both. If given both, you will receive this response: `{"message":"Either an email address or a phone number should be provided, but not both."}`
      *
-     * @param array $headerParameters {
-     *
-     * @var string-Type
-     * @var string
-     *                  }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(?\Braze\Model\SubscriptionStatusSetPostBody $requestBody = null, array $headerParameters = [])
     {

@@ -66,12 +66,11 @@ class DeleteScimV2UserById extends \Braze\Runtime\Client\BaseEndpoint implements
      *
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $X-Request-Origin
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "X-Request-Origin"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(string $id, array $headerParameters = [])
     {

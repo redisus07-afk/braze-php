@@ -58,11 +58,10 @@ class PostUsersExternalIdsRemove extends \Braze\Runtime\Client\BaseEndpoint impl
      *
      * - Rate limit hit (more than 1,000 requests per minute)
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(?\Braze\Model\UsersExternalIdsRemovePostBody $requestBody = null, array $headerParameters = [])
     {

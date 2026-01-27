@@ -281,19 +281,16 @@ class GetCampaignsDetail extends \Braze\Runtime\Client\BaseEndpoint implements \
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
-     *
-     * @var string $campaign_id (Required) String
+     * @param array{
+     *    "campaign_id"?: string, //(Required) String
      *
      * See [campaign API identifier](https://www.braze.com/docs/api/identifier_types/).
      *
      * The `campaign_id` for API campaigns can be found on the **Settings > Setup and Testing > API Keys** and the campaign details page within your dashboard, or you can use the [Campaign List Endpoint](https://www.braze.com/docs/api/endpoints/export/campaigns/get_campaign_analytics/#campaign-list-endpoint).
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(array $queryParameters = [], array $headerParameters = [])
     {

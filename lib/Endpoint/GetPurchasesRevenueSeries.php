@@ -51,24 +51,21 @@ class GetPurchasesRevenueSeries extends \Braze\Runtime\Client\BaseEndpoint imple
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
-     *
-     * @var string $ending_at (Optional) Datetime (ISO 8601 string)
-     *             Date on which the data series should end. Defaults to time of the request.
-     * @var int    $length (Required) Integer
-     *             Maximum number of days before ending_at to include in the returned series. Must be between 1 and 100 (inclusive).
-     * @var int    $unit (Optional) String
-     *             Unit of time between data points. Can be `day` or `hour`, defaults to `day`.
-     * @var string $app_id (Optional) String
-     *             App API identifier retrieved from the Settings > Setup and Testing > API Keys to limit analytics to a specific app
-     * @var string $product (Optional) String
-     *             Name of product to filter response by. If excluded, results for all apps will be returned.
-     *             }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "ending_at"?: string, //(Optional) Datetime (ISO 8601 string)
+     * Date on which the data series should end. Defaults to time of the request.
+     *    "length"?: int, //(Required) Integer
+     * Maximum number of days before ending_at to include in the returned series. Must be between 1 and 100 (inclusive).
+     *    "unit"?: int, //(Optional) String
+     * Unit of time between data points. Can be `day` or `hour`, defaults to `day`.
+     *    "app_id"?: string, //(Optional) String
+     * App API identifier retrieved from the Settings > Setup and Testing > API Keys to limit analytics to a specific app.
+     *    "product"?: string, //(Optional) String
+     * Name of product to filter response by. If excluded, results for all apps will be returned.
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(array $queryParameters = [], array $headerParameters = [])
     {

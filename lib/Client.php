@@ -75,12 +75,10 @@ class Client extends Runtime\Client\Client
      * | --- | --- |
      * | `catalog-not-found` | Check that the catalog name is valid. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -200,12 +198,10 @@ class Client extends Runtime\Client\Client
      *
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -391,12 +387,10 @@ class Client extends Runtime\Client\Client
      * | `too-many-catalog-atoms` | You can only create one catalog per request. |
      * | `too-many-fields` | Number of fields limit is 30. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -502,12 +496,10 @@ class Client extends Runtime\Client\Client
      * | `invalid-ids` | Item IDs can only include letters, numbers, hyphens, and underscores. |
      * | `request-includes-too-many-items` | Your request has too many items. The item limit per request is 50. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -659,12 +651,10 @@ class Client extends Runtime\Client\Client
      * | `catalog-not-found` | Check that the catalog name is valid. |
      * | `invalid-cursor` | Check that your `cursor` is valid. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -808,12 +798,10 @@ class Client extends Runtime\Client\Client
      * | `too-deep-nesting-in-value-object` | Item objects can't have more than 50 levels of nesting. |
      * | `unable-to-coerce-value` | Item types can't be converted. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -977,12 +965,10 @@ class Client extends Runtime\Client\Client
      * | `too-deep-nesting-in-value-object` | Item objects can't have more than 50 levels of nesting. |
      * | `unable-to-coerce-value` | Item types can't be converted. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -1118,12 +1104,10 @@ class Client extends Runtime\Client\Client
      * | `request_includes_too_many_items` | Your request has too many items. The item limit per request is 50. |
      * | `unable_to_coerce_value` | Item types can't be converted. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -1219,12 +1203,10 @@ class Client extends Runtime\Client\Client
      * | `catalog-not-found` | Check that the catalog name is valid. |
      * | `item-not-found` | Check that the item to be deleted exists in your catalog. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -1330,12 +1312,10 @@ class Client extends Runtime\Client\Client
      * | `catalog-not-found` | Check that the catalog name is valid. |
      * | `item-not-found` | Check that the item is in the catalog. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -1469,12 +1449,10 @@ class Client extends Runtime\Client\Client
      * | `too-deep-nesting-in-value-object` | Item objects can't have more than 50 levels of nesting. |
      * | `unable-to-coerce-value` | Item types can't be converted. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -1606,12 +1584,10 @@ class Client extends Runtime\Client\Client
      * | `too-deep-nesting-in-value-object` | Item objects can't have more than 50 levels of nesting. |
      * | `unable-to-coerce-value` | Item types can't be converted. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -1741,12 +1717,10 @@ class Client extends Runtime\Client\Client
      * | `too_deep_nesting_in_value_object` | Item objects can't have more than 50 levels of nesting. |
      * | `unable_to_coerce_value` | Item types can't be converted. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -1814,36 +1788,32 @@ class Client extends Runtime\Client\Client
      *
      *  ```
      *
-     * @param array $queryParameters {
-     *
-     * @var string $start_date (Optional*) String in YYYY-MM-DD format
+     * @param array{
+     *    "start_date"?: string, //(Optional*) String in YYYY-MM-DD format
      *
      * Start date of the range to retrieve hard bounces, must be earlier than `end_date`. This is treated as midnight in UTC time by the API.
      *
      *You must provide either an `email` or a `start_date`, and an `end_date`.
-     * @var string $end_date (Optional*) String in YYYY-MM-DD format
+     *    "end_date"?: string, //(Optional*) String in YYYY-MM-DD format
      *
      * String in YYYY-MM-DD format. End date of the range to retrieve hard bounces. This is treated as midnight in UTC time by the API.
      *
      *You must provide either an `email` or a `start_date`, and an `end_date`.
-     * @var int $limit (Optional) Integer
+     *    "limit"?: int, //(Optional) Integer
      *
      * Optional field to limit the number of results returned. Defaults to 100, maximum is 500.
-     * @var int $offset (Optional) Integer
+     *    "offset"?: int, //(Optional) Integer
      *
-     * Optional beginning point in the list to retrieve from
-     * @var string $email (Optional*) String
+     * Optional beginning point in the list to retrieve from.
+     *    "email"?: string, //(Optional*) String
      *
      * If provided, we will return whether or not the user has hard bounced.
      *
      *You must provide either an `email` or a `start_date`, and an `end_date`.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -1913,33 +1883,29 @@ class Client extends Runtime\Client\Client
      *
      *  ```
      *
-     * @param array $queryParameters {
-     *
-     * @var string $start_date (Optional*) String in YYYY-MM-DD format
+     * @param array{
+     *    "start_date"?: string, //(Optional*) String in YYYY-MM-DD format
      *
      * Start date of the range to retrieve unsubscribes, must be earlier than end_date. This is treated as midnight in UTC time by the API.
-     * @var string $end_date (Optional*)  String in YYYY-MM-DD format
+     *    "end_date"?: string, //(Optional*)  String in YYYY-MM-DD format
      *
      * End date of the range to retrieve unsubscribes. This is treated as midnight in UTC time by the API.
-     * @var int $limit (Optional) Integer
+     *    "limit"?: int, //(Optional) Integer
      *
      * Optional field to limit the number of results returned. Limit must be greater than 1. Defaults to 100, maximum is 500.
-     * @var int $offset (Optional) Integer
+     *    "offset"?: int, //(Optional) Integer
      *
-     * Optional beginning point in the list to retrieve from
-     * @var string $sort_direction (Optional) String
+     * Optional beginning point in the list to retrieve from.
+     *    "sort_direction"?: string, //(Optional) String
      *
      * Pass in the value `asc` to sort unsubscribes from oldest to newest. Pass in `desc` to sort from newest to oldest. If sort_direction is not included, the default order is newest to oldest.
-     * @var string $email (Optional*) String
+     *    "email"?: string, //(Optional*) String
      *
      * If provided, we will return whether or not the user has unsubscribed.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -1976,12 +1942,10 @@ class Client extends Runtime\Client\Client
      * | `email` | Required | String or array | String email address to modify, or an array of up to 50 email addresses to modify. |
      * | `subscription_state` | Required | String | Either “subscribed”, “unsubscribed”, or “opted_in”. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -2015,12 +1979,10 @@ class Client extends Runtime\Client\Client
      * | --- | --- | --- | --- |
      * | `email` | Required | String or array | String email address to modify, or an array of up to 50 email addresses to modify. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -2054,12 +2016,10 @@ class Client extends Runtime\Client\Client
      * | --- | --- | --- | --- |
      * | `email` | Required | String or array | String email address to modify, or an array of up to 50 email addresses to modify. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -2093,12 +2053,10 @@ class Client extends Runtime\Client\Client
      * | --- | --- | --- | --- |
      * | `email` | Required | String or array | String email address to blacklist, or an array of up to 50 email addresses to blocklist. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -2132,12 +2090,10 @@ class Client extends Runtime\Client\Client
      * | --- | --- | --- | --- |
      * | `email` | Required | String or array | String email address to blacklist, or an array of up to 50 email addresses to blocklist. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -2340,26 +2296,22 @@ class Client extends Runtime\Client\Client
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
-     *
-     * @var string $campaign_id (Required) String
+     * @param array{
+     *    "campaign_id"?: string, //(Required) String
      *
      * See [campaign API identifier](https://www.braze.com/docs/api/identifier_types/).
      *
      * The `campaign_id` for API campaigns can be found at **Settings > Setup and Testing > API Keys** and the **Campaign Details** page within your dashboard, or you can use the [List campaigns endpoint](https://www.braze.com/docs/api/endpoints/export/campaigns/get_campaigns/).
-     * @var int $length (Required) Integer
+     *    "length"?: int, //(Required) Integer
      *
      * Max number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive).
-     * @var string $ending_at (Optional) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
+     *    "ending_at"?: string, //(Optional) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
      *
      * Date on which the data series should end. Defaults to time of the request.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -2643,20 +2595,16 @@ class Client extends Runtime\Client\Client
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
-     *
-     * @var string $campaign_id (Required) String
+     * @param array{
+     *    "campaign_id"?: string, //(Required) String
      *
      * See [campaign API identifier](https://www.braze.com/docs/api/identifier_types/).
      *
      * The `campaign_id` for API campaigns can be found on the **Settings > Setup and Testing > API Keys** and the campaign details page within your dashboard, or you can use the [Campaign List Endpoint](https://www.braze.com/docs/api/endpoints/export/campaigns/get_campaign_analytics/#campaign-list-endpoint).
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -2709,30 +2657,26 @@ class Client extends Runtime\Client\Client
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
+     * @param array{
+     *    "page"?: int, //(Optional) Integer
      *
-     * @var int $page (Optional) Integer
+     * The page of campaigns to return, defaults to 0 (returns the first set of up to 100).
+     *    "include_archived"?: bool, //(Optional) Boolean
      *
-     * The page of campaigns to return, defaults to 0 (returns the first set of up to 100)
-     * @var bool $include_archived (Optional) Boolean
-     *
-     * Whether or not to include archived campaigns, defaults to false
-     * @var string $sort_direction (Optional) String
+     * Whether or not to include archived campaigns, defaults to false.
+     *    "sort_direction"?: string, //(Optional) String
      *
      * - Sort creation time from newest to oldest: pass in the value `desc`.
      * - Sort creation time from oldest to newest: pass in the value `asc`.
      *
      * If `sort_direction` is not included, the default order is oldest to newest.
-     * @var string $last_edit.time[gt] (Optional) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
+     *    "last_edit.time[gt]"?: string, //(Optional) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
      *
      * Filters the results and only returns campaigns that were edited greater than the time provided till now. Format is `yyyy-MM-DDTHH:mm:ss`.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -2811,27 +2755,23 @@ class Client extends Runtime\Client\Client
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
-     *
-     * @var string (Required) String
+     * @param array{
+     *    "campaign_id"?: string, //(Required) String
      *
      * See [Campaign API identifier](https://www.braze.com/docs/api/identifier_types/).
-     * @var string (Required) String
+     *    "send_id"?: string, //(Required) String
      *
      * See [Send API identifier](https://www.braze.com/docs/api/identifier_types/).
-     * @var int (Required) Integer
+     *    "length"?: int, //(Required) Integer
      *
      * Max number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive).
-     * @var string (Optional) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
+     *    "ending_at"?: string, //(Optional) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
      *
      * Date on which the data series should end. Defaults to time of the request.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -2918,40 +2858,36 @@ class Client extends Runtime\Client\Client
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
-     *
-     * @var string $canvas_id (Required) String
+     * @param array{
+     *    "canvas_id"?: string, //(Required) String
      *
      * See [Canvas API Identifier](https://www.braze.com/docs/api/identifier_types/).
-     * @var string $ending_at (Required) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
+     *    "ending_at"?: string, //(Required) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
      *
      * Date on which the data export should end. Defaults to time of the request.
-     * @var string $starting_at (Optional*) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
+     *    "starting_at"?: string, //(Optional*) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
      *
      * Date on which the data export should begin.
      *
      *Either `length` or `starting_at` is required.
-     * @var int $length (Optional*) String
+     *    "length"?: int, //(Optional*) String
      *
      * Maximum number of days before `ending_at` to include in the returned series. Must be between 1 and 14 (inclusive).
      *
      *Either `length` or `starting_at` is required.
-     * @var bool $include_variant_breakdown (Optional) Boolean
+     *    "include_variant_breakdown"?: bool, //(Optional) Boolean
      *
-     * Whether or not to include variant stats (defaults to false)
-     * @var bool $include_step_breakdown (Optional) Boolean
+     * Whether or not to include variant stats (defaults to false).
+     *    "include_step_breakdown"?: bool, //(Optional) Boolean
      *
-     * Whether or not to include step stats (defaults to false)
-     * @var bool $include_deleted_step_data (Optional) Boolean
+     * Whether or not to include step stats (defaults to false).
+     *    "include_deleted_step_data"?: bool, //(Optional) Boolean
      *
      * Whether or not to include step stats for deleted steps (defaults to false).
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -3031,39 +2967,35 @@ class Client extends Runtime\Client\Client
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://desktop.postman.com/?desktopVersion=9.19.0&userId=16580579&teamId=409325).
      *
-     * @param array $queryParameters {
-     *
-     * @var string $canvas_id (Required) String
+     * @param array{
+     *    "canvas_id"?: string, //(Required) String
      *
      * See [Canvas API identifier](https://www.braze.com/docs/api/identifier_types/).
-     * @var string $ending_at (Required) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
-     *             Date on which the data export should end. Defaults to time of the request
-     * @var string $starting_at (Optional*) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
+     *    "ending_at"?: string, //(Required) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
+     * Date on which the data export should end. Defaults to time of the request
+     *    "starting_at"?: string, //(Optional*) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
      *
      * Date on which the data export should begin.
      *
      *Either `length` or `starting_at` is required.
-     * @var int $length (Optional*) Integer
+     *    "length"?: int, //(Optional*) Integer
      *
      * Max number of days before `ending_at` to include in the returned series. Must be between 1 and 14 (inclusive).
      *
      *Either `length` or `starting_at` is required.
-     * @var bool $include_variant_breakdown (Optional) Boolean
+     *    "include_variant_breakdown"?: bool, //(Optional) Boolean
      *
-     * Whether or not to include variant stats (defaults to false)
-     * @var bool $include_step_breakdown (Optional) Boolean
+     * Whether or not to include variant stats (defaults to false).
+     *    "include_step_breakdown"?: bool, //(Optional) Boolean
      *
-     * Whether or not to include step stats (defaults to false)
-     * @var bool $include_deleted_step_data (Optional) Boolean
+     * Whether or not to include step stats (defaults to false).
+     *    "include_deleted_step_data"?: bool, //(Optional) Boolean
      *
      * Whether or not to include step stats for deleted steps (defaults to false).
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -3152,18 +3084,14 @@ class Client extends Runtime\Client\Client
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://desktop.postman.com/?desktopVersion=9.19.0&userId=16580579&teamId=409325).
      *
-     * @param array $queryParameters {
-     *
-     * @var string $canvas_id (Required) String
+     * @param array{
+     *    "canvas_id"?: string, //(Required) String
      *
      * See [Canvas API Identifier](https://www.braze.com/docs/api/identifier_types/)
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -3217,30 +3145,26 @@ class Client extends Runtime\Client\Client
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://desktop.postman.com/?desktopVersion=9.19.0&userId=16580579&teamId=409325).
      *
-     * @param array $queryParameters {
+     * @param array{
+     *    "page"?: int, //(Optional) Integer
      *
-     * @var int $page (Optional) Integer
+     * The page of Canvases to return, defaults to `0` (returns the first set of up to 100).
+     *    "include_archived"?: bool, //(Optional) Boolean
      *
-     * The page of Canvases to return, defaults to `0` (returns the first set of up to 100)
-     * @var bool $include_archived (Optional) Boolean
-     *
-     * Whether or not to include archived Canvases, defaults to `false`
-     * @var string $sort_direction (Optional) String
+     * Whether or not to include archived Canvases, defaults to `false`.
+     *    "sort_direction"?: string, //(Optional) String
      *
      * - Sort creation time from newest to oldest: pass in the value `desc`.
      * - Sort creation time from oldest to newest: pass in the value `asc`.
      *
      * If `sort_direction` is not included, the default order is oldest to newest.
-     * @var string $last_edit.time[gt] (Optional) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
+     *    "last_edit.time[gt]"?: string, //(Optional) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
      *
      * Filters the results and only returns Canvases that were edited greater than the time provided till now. Format is `yyyy-MM-DDTHH:mm:ss`.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -3291,18 +3215,14 @@ class Client extends Runtime\Client\Client
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
-     *
-     * @var int $page (Optional) Integer
+     * @param array{
+     *    "page"?: int, //(Optional) Integer
      *
      * The page of event names to return, defaults to 0 (returns the first set of up to 250).
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -3354,35 +3274,31 @@ class Client extends Runtime\Client\Client
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
+     * @param array{
+     *    "event"?: string, //(Required) String
      *
-     * @var string $event (Required) String
-     *
-     * The name of the custom event for which to return analytics
-     * @var int $length (Required) Integer
+     * The name of the custom event for which to return analytics.
+     *    "length"?: int, //(Required) Integer
      *
      * Maximum number of units (days or hours) before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive).
-     * @var string $unit (Optional) String
+     *    "unit"?: string, //(Optional) String
      *
-     * Unit of time between data points - can be `day` or `hour`, defaults to `day`
-     * @var string $ending_at (Optional) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
+     * Unit of time between data points - can be `day` or `hour`, defaults to `day`.
+     *    "ending_at"?: string, //(Optional) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
      *
      * Date on which the data series should end. Defaults to time of the request.
-     * @var string $app_id (Optional) String
+     *    "app_id"?: string, //(Optional) String
      *
      * App API identifier retrieved from the [API Keys](https://www.braze.com/docs/user_guide/administrative/app_settings/api_settings_tab/) page to limit analytics to a specific app.
      *
      * Note: If you are using our [older navigation](https://www.braze.com/docs/navigation), `app_id` can be found at **Developer Console** > **API Settings**
-     * @var string $segment_id (Optional) String
+     *    "segment_id"?: string, //(Optional) String
      *
      * See [Segment API identifier](https://www.braze.com/docs/api/identifier_types/). Segment ID indicating the analytics-enabled segment for which event analytics should be returned.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -3430,24 +3346,20 @@ class Client extends Runtime\Client\Client
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
-     *
-     * @var int $length (Required) Integer
+     * @param array{
+     *    "length"?: int, //(Required) Integer
      *
      * Maximum number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive).
-     * @var string $ending_at (Optional) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
+     *    "ending_at"?: string, //(Optional) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
      *
      * Date on which the data series should end. Defaults to time of the request.
-     * @var string $app_id (Optional) String
+     *    "app_id"?: string, //(Optional) String
      *
      * App API identifier retrieved from the [API Keys](https://www.braze.com/docs/user_guide/administrative/app_settings/api_settings_tab/) page. If excluded, results for all apps in the workspace will be returned.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -3495,23 +3407,19 @@ class Client extends Runtime\Client\Client
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
-     *
-     * @var int $length (Required) Integer
+     * @param array{
+     *    "length"?: int, //(Required) Integer
      *
      * Maximum number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive).
-     * @var string $ending_at (Optional)  Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
-     *             Date on which the data series should end. Defaults to time of the request.
-     * @var string $app_id (Optional) String
+     *    "ending_at"?: string, //(Optional)  Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
+     * Date on which the data series should end. Defaults to time of the request.
+     *    "app_id"?: string, //(Optional) String
      *
      * App API identifier retrieved from the [API Keys](https://www.braze.com/docs/user_guide/administrative/app_settings/api_settings_tab/) page. If excluded, results for all apps in the workspace will be returned.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -3559,24 +3467,20 @@ class Client extends Runtime\Client\Client
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
-     *
-     * @var int $length (Required) Integer
+     * @param array{
+     *    "length"?: int, //(Required) Integer
      *
      * Maximum number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive).
-     * @var string $ending_at (Optional)  Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
+     *    "ending_at"?: string, //(Optional)  Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
      *
      * Date on which the data series should end. Defaults to time of the request.
-     * @var string $app_id (Optional) String
+     *    "app_id"?: string, //(Optional) String
      *
      * App API identifier retrieved from the [API Keys](https://www.braze.com/docs/user_guide/administrative/app_settings/api_settings_tab/) page. If excluded, results for all apps in the workspace will be returned.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -3624,24 +3528,20 @@ class Client extends Runtime\Client\Client
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
-     *
-     * @var int $length (Required) Integer
+     * @param array{
+     *    "length"?: int, //(Required) Integer
      *
      * Maximum number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive).
-     * @var string $ending_at (Optional)  Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
+     *    "ending_at"?: string, //(Optional)  Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
      *
      * Date on which the data series should end. Defaults to time of the request.
-     * @var string $app_id (Optional) String
+     *    "app_id"?: string, //(Optional) String
      *
      * App API identifier retrieved from the [API Keys](https://www.braze.com/docs/user_guide/administrative/app_settings/api_settings_tab/) page. If excluded, results for all apps in the workspace will be returned.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -3692,29 +3592,25 @@ class Client extends Runtime\Client\Client
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
-     *
-     * @var string $card_id (Required) String
+     * @param array{
+     *    "card_id"?: string, //(Required) String
      *
      * See [Card API identifier](https://www.braze.com/docs/api/identifier_types/).
      *
      * The `card_id` for a given card can be found in the **Settings > Setup and Testing > API Keys** page and on the card details page within your dashboard, or you can use the [News Feed List Endpoint](https://www.braze.com/docs/api/endpoints/export/news_feed/get_news_feed_cards/).
-     * @var int $length (Required) Integer
+     *    "length"?: int, //(Required) Integer
      *
      * Max number of units (days or hours) before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive).
-     * @var string $unit (Optional) String
+     *    "unit"?: string, //(Optional) String
      *
      * Unit of time between data points. Can be `day` or `hour`, defaults to `day`.
-     * @var string $ending_at (Optional) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
+     *    "ending_at"?: string, //(Optional) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
      *
      * Date on which the data series should end. Defaults to time of the request.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -3767,20 +3663,16 @@ class Client extends Runtime\Client\Client
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
-     *
-     * @var string $card_id (Required) String
+     * @param array{
+     *    "card_id"?: string, //(Required) String
      *
      * See [Card API identifier](https://www.braze.com/docs/api/identifier_types/).
      *
      * The `card_id` for a given card can be found in the **Settings > Setup and Testing > API Keys** page and on the card details page within your dashboard, or you can use the [News Feed List Endpoint](https://www.braze.com/docs/api/endpoints/export/news_feed/get_news_feed_cards/).
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -3830,27 +3722,23 @@ class Client extends Runtime\Client\Client
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
+     * @param array{
+     *    "page"?: int, //(Optional) Integer
      *
-     * @var int $page (Optional) Integer
+     * The page of cards to return, defaults to 0 (returns the first set of up to 100).
+     *    "include_archived"?: bool, //(Optional) Boolean
      *
-     * The page of cards to return, defaults to 0 (returns the first set of up to 100)
-     * @var bool $include_archived (Optional) Boolean
-     *
-     * Whether or not to include archived cards, defaults to false
-     * @var string $sort_direction (Optional) String
+     * Whether or not to include archived cards, defaults to false.
+     *    "sort_direction"?: string, //(Optional) String
      *
      * - Sort creation time from newest to oldest: pass in the value `desc`.
      * - Sort creation time from oldest to newest: pass in the value `asc`.
      *
      * If `sort_direction` is not included, the default order is oldest to newest.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -3892,18 +3780,14 @@ class Client extends Runtime\Client\Client
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
-     *
-     * @var int $page (Optional) Integer
+     * @param array{
+     *    "page"?: int, //(Optional) Integer
      *
      * The page of your product list that you would like to view.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -3957,25 +3841,21 @@ class Client extends Runtime\Client\Client
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
-     *
-     * @var string $ending_at (Optional) Datetime (ISO 8601 string)
-     *             Date on which the data series should end. Defaults to time of the request.
-     * @var int    $length (Required) Integer
-     *             Maximum number of days before ending_at to include in the returned series. Must be between 1 and 100 (inclusive).
-     * @var int    $unit (Optional) String
-     *             Unit of time between data points. Can be `day` or `hour`, defaults to `day`.
-     * @var string $app_id (Optional) String
-     *             App API identifier retrieved from the [API Keys](https://www.braze.com/docs/user_guide/administrative/app_settings/api_settings_tab/) page. If excluded, results for all apps in the workspace will be returned.
-     * @var string $product (Optional) String
-     *             Name of product to filter response by. If excluded, results for all apps will be returned.
-     *             }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "ending_at"?: string, //(Optional) Datetime (ISO 8601 string)
+     * Date on which the data series should end. Defaults to time of the request.
+     *    "length"?: int, //(Required) Integer
+     * Maximum number of days before ending_at to include in the returned series. Must be between 1 and 100 (inclusive).
+     *    "unit"?: int, //(Optional) String
+     * Unit of time between data points. Can be `day` or `hour`, defaults to `day`.
+     *    "app_id"?: string, //(Optional) String
+     * App API identifier retrieved from the [API Keys](https://www.braze.com/docs/user_guide/administrative/app_settings/api_settings_tab/) page. If excluded, results for all apps in the workspace will be returned.
+     *    "product"?: string, //(Optional) String
+     * Name of product to filter response by. If excluded, results for all apps will be returned.
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -4029,25 +3909,21 @@ class Client extends Runtime\Client\Client
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
-     *
-     * @var string $ending_at (Optional) Datetime (ISO 8601 string)
-     *             Date on which the data series should end. Defaults to time of the request.
-     * @var int    $length (Required) Integer
-     *             Maximum number of days before ending_at to include in the returned series. Must be between 1 and 100 (inclusive).
-     * @var int    $unit (Optional) String
-     *             Unit of time between data points. Can be `day` or `hour`, defaults to `day`.
-     * @var string $app_id (Optional) String
-     *             App API identifier retrieved from the Settings > Setup and Testing > API Keys to limit analytics to a specific app
-     * @var string $product (Optional) String
-     *             Name of product to filter response by. If excluded, results for all apps will be returned.
-     *             }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "ending_at"?: string, //(Optional) Datetime (ISO 8601 string)
+     * Date on which the data series should end. Defaults to time of the request.
+     *    "length"?: int, //(Required) Integer
+     * Maximum number of days before ending_at to include in the returned series. Must be between 1 and 100 (inclusive).
+     *    "unit"?: int, //(Optional) String
+     * Unit of time between data points. Can be `day` or `hour`, defaults to `day`.
+     *    "app_id"?: string, //(Optional) String
+     * App API identifier retrieved from the Settings > Setup and Testing > API Keys to limit analytics to a specific app.
+     *    "product"?: string, //(Optional) String
+     * Name of product to filter response by. If excluded, results for all apps will be returned.
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -4099,24 +3975,20 @@ class Client extends Runtime\Client\Client
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
+     * @param array{
+     *    "page"?: int, //(Optional) Integer
      *
-     * @var int $page (Optional) Integer
-     *
-     * The page of segments to return, defaults to 0 (returns the first set of up to 100)
-     * @var string $sort_direction (Optional) String
+     * The page of segments to return, defaults to 0 (returns the first set of up to 100).
+     *    "sort_direction"?: string, //(Optional) String
      *
      * - Sort creation time from newest to oldest: pass in the value `desc`.
      * - Sort creation time from oldest to newest: pass in the value `asc`.
      *
      * If `sort_direction` is not included, the default order is oldest to newest.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -4164,26 +4036,22 @@ class Client extends Runtime\Client\Client
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
-     *
-     * @var string $segment_id (Required) String
+     * @param array{
+     *    "segment_id"?: string, //(Required) String
      *
      * See [Segment API identifier](https://www.braze.com/docs/api/identifier_types/).
      *
      * The `segment_id` for a given segment can be found on the [API Keys](https://www.braze.com/docs/user_guide/administrative/app_settings/api_settings_tab/) page within your Braze account or you can use the [Export segment list endpoint](https://www.braze.com/docs/api/endpoints/export/get_segment/).
-     * @var int $length (Required) Integer
+     *    "length"?: int, //(Required) Integer
      *
-     * Max number of days before `ending_at` to include in the returned series - must be between 1 and 100 (inclusive)
-     * @var string $ending_at (Optional) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
+     * Max number of days before `ending_at` to include in the returned series - must be between 1 and 100 (inclusive).
+     *    "ending_at"?: string, //(Optional) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
      *
      * Date on which the data series should end. Defaults to time of the request.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -4231,20 +4099,16 @@ class Client extends Runtime\Client\Client
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
-     *
-     * @var string $segment_id (Required) String
+     * @param array{
+     *    "segment_id"?: string, //(Required) String
      *
      * See [Segment API identifier](https://www.braze.com/docs/api/identifier_types/).
      *
      * The `segment_id` for a given segment can be found on the [API Keys](https://www.braze.com/docs/user_guide/administrative/app_settings/api_settings_tab/) page within your Braze account or you can use the [Export segment list endpoint](https://www.braze.com/docs/api/endpoints/export/get_segment/).
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -4292,30 +4156,26 @@ class Client extends Runtime\Client\Client
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
+     * @param array{
+     *    "length"?: int, //(Required) Integer
      *
-     * @var int $length (Required) Integer
-     *
-     * Max number of days before `ending_at` to include in the returned series - must be between 1 and 100 (inclusive)
-     * @var string $unit (Optional) String
+     * Max number of days before `ending_at` to include in the returned series - must be between 1 and 100 (inclusive).
+     *    "unit"?: string, //(Optional) String
      *
      * Unit of time between data points. Can be `day` or `hour`, defaults to `day`.
-     * @var string $ending_at (Optional) Datetime (ISO 8601 string)
+     *    "ending_at"?: string, //(Optional) Datetime (ISO 8601 string)
      *
      * Date on which the data series should end. Defaults to time of the request.
-     * @var string $app_id (Optional) String
+     *    "app_id"?: string, //(Optional) String
      *
      * App API identifier retrieved from the [API Keys](https://www.braze.com/docs/user_guide/administrative/app_settings/api_settings_tab/) page to limit analytics to a specific app.
-     * @var string $segment_id (Required) String
+     *    "segment_id"?: string, //(Required) String
      *
      * See [Segment API identifier](https://www.braze.com/docs/api/identifier_types/). Segment ID indicating the analytics-enabled segment for which sessions should be returned.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -4693,12 +4553,10 @@ class Client extends Runtime\Client\Client
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -5118,12 +4976,10 @@ class Client extends Runtime\Client\Client
      *
      * > Tip: For help with CSV and API exports, visit Export troubleshooting.
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -5374,12 +5230,10 @@ class Client extends Runtime\Client\Client
      *
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -5454,12 +5308,10 @@ class Client extends Runtime\Client\Client
      *
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -5509,18 +5361,14 @@ class Client extends Runtime\Client\Client
      *
      *  ```
      *
-     * @param array $queryParameters {
-     *
-     * @var string $end_time (Required) String in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
+     * @param array{
+     *    "end_time"?: string, //(Required) String in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
      *
      * End date of the range to retrieve upcoming scheduled Campaigns and Canvases. This is treated as midnight in UTC time by the API.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -5554,12 +5402,10 @@ class Client extends Runtime\Client\Client
      * | --- | --- | --- | --- |
      * | `schedule_id` | Required | String | The schedule_id to delete (obtained from the response to create schedule). |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -5594,12 +5440,10 @@ class Client extends Runtime\Client\Client
      * | `canvas_id` | Required | String | See [Canvas identifier](https://braze.com/docs/api/identifier_types/). |
      * | `schedule_id` | Required | String | The `schedule_id` to delete (obtained from the response to create schedule). |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -5636,12 +5480,10 @@ class Client extends Runtime\Client\Client
      * | `campaign_id` | Required | String | See [campaign identifier](https://www.braze.com/docs/api/identifier_types/). |
      * | `schedule_id` | Required | String | The `schedule_id` to delete (obtained from the response to create schedule). |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -5774,12 +5616,10 @@ class Client extends Runtime\Client\Client
      *
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -5830,12 +5670,10 @@ class Client extends Runtime\Client\Client
      * | `trigger_properties` | Optional | Object | Personalization key-value pairs for all users in this send. See [trigger properties](https://www.braze.com/docs/api/objects_filters/trigger_properties_object/). |
      * | `schedule` | Required | Schedule object | See [schedule object](https://www.braze.com/docs/api/objects_filters/schedule_object/). |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -5903,12 +5741,10 @@ class Client extends Runtime\Client\Client
      * }'
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -5966,12 +5802,10 @@ class Client extends Runtime\Client\Client
      * }'
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -6030,12 +5864,10 @@ class Client extends Runtime\Client\Client
      * | `schedule_id` | Optional | String | The `schedule_id` to update (obtained from the response to create schedule). |
      * | `schedule` | Required | Object | See [schedule object](https://www.braze.com/docs/api/objects_filters/schedule_object/). |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -6086,12 +5918,10 @@ class Client extends Runtime\Client\Client
      *
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -6151,12 +5981,10 @@ class Client extends Runtime\Client\Client
      *
      * Message sending endpoint responses will include the message’s `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the ID of the message dispatch, meaning the unique ID for each “transmission” sent from Braze. For more information, refer to [Dispatch ID behavior](https://www.braze.com/docs/help/help_articles/data/dispatch_id/).
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -6381,12 +6209,10 @@ class Client extends Runtime\Client\Client
      *
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -6455,12 +6281,10 @@ class Client extends Runtime\Client\Client
      *
      * > **Important:** Looking for the Canvas version of this endpoint? Check out [Sending Canvas messages via API-triggered delivery](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#create-send-endpoint).
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -6524,12 +6348,10 @@ class Client extends Runtime\Client\Client
      *
      * > **Important:** Looking for the camaigns version of this endpoint? Check out [Sending campaign messages via API-triggered delivery](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/).
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -6590,17 +6412,13 @@ class Client extends Runtime\Client\Client
      *
      *  ```
      *
-     * @param array $queryParameters {
-     *
-     * @var string $preference_center_api_id
-     * @var string $external_id (Required) String
-     *             }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "preference_center_api_id"?: string,
+     *    "external_id"?: string, //(Required) String
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -6674,11 +6492,9 @@ class Client extends Runtime\Client\Client
      *
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -6744,11 +6560,9 @@ class Client extends Runtime\Client\Client
      *
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -6821,12 +6635,10 @@ class Client extends Runtime\Client\Client
      *
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string-Type
-     * @var string
-     *                  }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -7061,12 +6873,10 @@ class Client extends Runtime\Client\Client
      *
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -7134,13 +6944,11 @@ class Client extends Runtime\Client\Client
      *
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $X-Request-Origin
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "X-Request-Origin"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -7242,13 +7050,11 @@ class Client extends Runtime\Client\Client
      *
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $X-Request-Origin
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "X-Request-Origin"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -7344,13 +7150,11 @@ class Client extends Runtime\Client\Client
      *
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $X-Request-Origin
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "X-Request-Origin"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -7432,18 +7236,14 @@ class Client extends Runtime\Client\Client
      *
      *  ```
      *
-     * @param array $queryParameters {
-     *
-     * @var string $filter
-     *             }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $X-Request-Origin
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "filter"?: string,
+     * } $queryParameters
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "X-Request-Origin"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -7531,13 +7331,11 @@ class Client extends Runtime\Client\Client
      *
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $X-Request-Origin
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "X-Request-Origin"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -7619,33 +7417,29 @@ class Client extends Runtime\Client\Client
      *
      *  ```
      *
-     * @param array $queryParameters {
-     *
-     * @var string $start_date (Optional*) String in YYYY-MM-DD format
+     * @param array{
+     *    "start_date"?: string, //(Optional*) String in YYYY-MM-DD format
      *
      * Start date of the range to retrieve invalid phone numbers, must be earlier than `end_date`. This is treated as midnight in UTC time by the API.
-     * @var string $end_date (Optional*) String in YYYY-MM-DD format
+     *    "end_date"?: string, //(Optional*) String in YYYY-MM-DD format
      *
      * End date of the range to retrieve invalid phone numbers. This is treated as midnight in UTC time by the API.
-     * @var int $limit (Optional) Integer
+     *    "limit"?: int, //(Optional) Integer
      *
      * Optional field to limit the number of results returned. Defaults to 100, maximum is 500.
-     * @var int $offset (Optional) Integer
+     *    "offset"?: int, //(Optional) Integer
      *
-     * Optional beginning point in the list to retrieve from
-     * @var int $phone_numbers (Optional*) Array of Strings in e.164 format
+     * Optional beginning point in the list to retrieve from.
+     *    "phone_numbers"?: int, //(Optional*) Array of Strings in e.164 format
      *
      * If provided, we will return the phone number if it has been found to be invalid.
-     * @var string $reason (Optional) String
+     *    "reason"?: string, //(Optional) String
      *
      * Available values are “provider_error” (provider error indicates phone cannot receive SMS) or “deactivated” (phone number has been deactivated). If omitted, all reasons are returned.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -7693,12 +7487,10 @@ class Client extends Runtime\Client\Client
      *
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     * @var string $Content-Type
-     *             }
-     *
+     * @param array{
+     *    "Authorization"?: string,
+     *    "Content-Type"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -7778,33 +7570,29 @@ class Client extends Runtime\Client\Client
      *
      *  ```
      *
-     * @param array $queryParameters {
+     * @param array{
+     *    "subscription_group_id"?: string, //(Required) String
      *
-     * @var string $subscription_group_id (Required) String
-     *
-     * The `id` of your subscription group
-     * @var string $external_id (Required*) String
+     * The `id` of your subscription group.
+     *    "external_id"?: string, //(Required*) String
      *
      * The `external_id` of the user (must include at least one and at most 50 `external_ids`).
      *
      * When both an `external_id` and `email`/`phone` are submitted, only the `external_id`(s) provided will be applied to the result query.
-     * @var string $email (Required* ) String
+     *    "email"?: string, //(Required* ) String
      *
      * The email address of the user. It can be passed as an array of strings with a maximum of 50.
      *
      * Submitting both an email address and phone number (with no `external_id`) will result in an error.
-     * @var string $phone (Required*) String in [E.164](https://en.wikipedia.org/wiki/E.164) format
+     *    "phone"?: string, //(Required*) String in [E.164](https://en.wikipedia.org/wiki/E.164) format
      *
      * The phone number of the user. If email is not included, you must include at least one phone number (with a maximum of 50).
      *
      * Submitting both an email address and phone number (with no `external_id`) will result in an error.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -7846,32 +7634,28 @@ class Client extends Runtime\Client\Client
      *
      *  ```
      *
-     * @param array $queryParameters {
-     *
-     * @var string $external_id (Required) String
+     * @param array{
+     *    "external_id"?: string, //(Required) String
      *
      * The `external_id` of the user. Must include at least one and at most 50 `external_ids`.
      *
      * If there are multiple users (multiple `external_ids`) who share the same email address, all users will be returned as a separate user (even if they have the same email address or subscription group).
-     * @var string $email (Required) String
+     *    "email"?: string, //(Required) String
      *
      * The email address of the user, can be passed as an array of strings. Must include at least one email address (with a maximum of 50).
-     * @var int $limit (Optional) Integer
+     *    "limit"?: int, //(Optional) Integer
      *
      * The limit on the maximum number of results returned. Default (and maximum) limit is 100.
-     * @var int $offset (Optional) Integer
+     *    "offset"?: int, //(Optional) Integer
      *
-     * Number of templates to skip before returning the rest of the templates that fit the search criteria
-     * @var string $phone (Required*) String in [E.164](https://en.wikipedia.org/wiki/E.164) format
+     * Number of templates to skip before returning the rest of the templates that fit the search criteria.
+     *    "phone"?: string, //(Required*) String in [E.164](https://en.wikipedia.org/wiki/E.164) format
      *
      * The phone number of the user. Must include at least one phone number (with a maximum of 50).
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -7954,12 +7738,10 @@ class Client extends Runtime\Client\Client
      *
      * > The endpoint only accepts the `email` or `phone` value, not both. If given both, you will receive this response: `{"message":"Either an email address or a phone number should be provided, but not both."}`
      *
-     * @param array $headerParameters {
-     *
-     * @var string-Type
-     * @var string
-     *                  }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -8039,12 +7821,10 @@ class Client extends Runtime\Client\Client
      *
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string-Type
-     * @var string
-     *                  }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -8127,27 +7907,23 @@ class Client extends Runtime\Client\Client
      * | `Offset is invalid` | The `offset` parameter must be an integer greater than 0. |
      * | Offset must be greater than 0 | Change the `offset` parameter to an integer greater than 0. |
      *
-     * @param array $queryParameters {
-     *
-     * @var string $modified_after (Optional) String in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+     * @param array{
+     *    "modified_after"?: string, //(Optional) String in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
      *
      * Retrieve only content blocks updated at or after the given time.
-     * @var string $modified_before (Optional) String in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+     *    "modified_before"?: string, //(Optional) String in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
      *
      * Retrieve only content blocks updated at or before the given time.
-     * @var int $limit (Optional) Positive Number
+     *    "limit"?: int, //(Optional) Positive Number
      *
      * Maximum number of content blocks to retrieve. Default to 100 if not provided, with a maximum acceptable value of 1000.
-     * @var int $offset (Optional) Positive Number
+     *    "offset"?: int, //(Optional) Positive Number
      *
      * Number of content blocks to skip before returning rest of the templates that fit the search criteria.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -8222,23 +7998,19 @@ class Client extends Runtime\Client\Client
      * | `Content Block has been deleted—content not available` | This Content Block, though it may have existed earlier, has been deleted. |
      * | `Include Inclusion Data—error` | This parameter only accepts boolean values (true or false). Make sure the value for `include_inclusion_data` is not encapsulated in quotes (`""`), which causes the value to be sent as a string instead. See request headers for details. |
      *
-     * @param array $queryParameters {
-     *
-     * @var string $content_block_id (Required) String
+     * @param array{
+     *    "content_block_id"?: string, //(Required) String
      *
      * The Content Block identifier.
      *
      * You can find this by either listing Content Block information through an API call or going to the API Keys page, then scrolling to the bottom and searching for your Content Block API identifier.
-     * @var bool $include_inclusion_data (Optional) Boolean
+     *    "include_inclusion_data"?: bool, //(Optional) Boolean
      *
      * When set to `true`, the API returns back the Message Variation API identifier of campaigns and Canvases where this Content Block is included, to be used in subsequent calls. The results exclude archived or deleted campaigns or Canvases.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -8329,12 +8101,10 @@ class Client extends Runtime\Client\Client
      * | `All tags must be strings` | Make sure your tags are encapsulated in quotes (`""`). |
      * | `Some tags could not be found` | To add a tag when creating a Content Block, the tag must already exist in Braze. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -8429,12 +8199,10 @@ class Client extends Runtime\Client\Client
      * | `All tags must be strings` | Make sure your tags are encapsulated in quotes (`""`). |
      * | `Some tags could not be found` | To add a tag when creating a Content Block, the tag must already exist in Braze. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -8498,27 +8266,23 @@ class Client extends Runtime\Client\Client
      *
      *  ```
      *
-     * @param array $queryParameters {
-     *
-     * @var string $modified_after (Optional) String in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+     * @param array{
+     *    "modified_after"?: string, //(Optional) String in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
      *
      * Retrieve only templates updated at or after the given time.
-     * @var string $modified_before (Optional) String in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+     *    "modified_before"?: string, //(Optional) String in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
      *
      * Retrieve only templates updated at or before the given time.
-     * @var int $limit (Optional) Positive Number
+     *    "limit"?: int, //(Optional) Positive Number
      *
      * Maximum number of templates to retrieve. Default to 100 if not provided, with a maximum acceptable value of 1000.
-     * @var int $offset (Optional) Positive Number
+     *    "offset"?: int, //(Optional) Positive Number
      *
      * Number of templates to skip before returning rest of the templates that fit the search criteria.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -8585,18 +8349,14 @@ class Client extends Runtime\Client\Client
      *
      * Images in this response will show in the `body` variable as HTML.
      *
-     * @param array $queryParameters {
-     *
-     * @var string $email_template_id (Required) String
+     * @param array{
+     *    "email_template_id"?: string, //(Required) String
      *
      * See [email template's API identifier](https://www.braze.com/docs/api/identifier_types/).
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
-     *
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -8670,23 +8430,19 @@ class Client extends Runtime\Client\Client
      * | Email must have valid Content Block names | The email might contain Content Blocks that don’t exist in this environment. |
      * | Invalid value for `should_inline_css`. One of `true` or `false` was expected | This parameter only accepts boolean values (true or false). Make sure the value for `should_inline_css` is not encapsulated in quotes (`""`), which causes the value to be sent as a string instead. |
      *
-     * @param array $queryParameters {
-     *
-     * @var string $template_name (Required) String
-     * @var string $subject (Required) String
-     * @var string $body (Required) String
-     * @var string $plaintext_body (Optional) String
-     * @var string $preheader (Optional) String
-     * @var string $tags (Optional) String
-     * @var bool   $should_inline_css (Optional) Boolean
-     *             }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "template_name"?: string, //(Required) String
+     *    "subject"?: string, //(Required) String
+     *    "body"?: string, //(Required) String
+     *    "plaintext_body"?: string, //(Optional) String
+     *    "preheader"?: string, //(Optional) String
+     *    "tags"?: string, //(Optional) String
+     *    "should_inline_css"?: bool, //(Optional) Boolean
+     * } $queryParameters
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -8773,24 +8529,20 @@ class Client extends Runtime\Client\Client
      * | Some tags could not be found | To add a tag when creating an email template, the tag must already exist in Braze. |
      * | Invalid value for `should_inline_css`. One of `true` or `false` was expected | This parameter only accepts boolean values (true or false). Make sure the value for `should_inline_css` is not encapsulated in quotes (`""`), which causes the value to be sent as a string instead. |
      *
-     * @param array $queryParameters {
-     *
-     * @var string $email_template_id (Required) String
-     * @var string $template_name (Optional) String
-     * @var string $subject (Optional) String
-     * @var string $body (Optional) String
-     * @var string $plaintext_body (Optional) String
-     * @var string $preheader (Optional) String
-     * @var string $tags (Optional) String
-     * @var bool   $should_inline_css (Optional) Boolean
-     *             }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "email_template_id"?: string, //(Required) String
+     *    "template_name"?: string, //(Optional) String
+     *    "subject"?: string, //(Optional) String
+     *    "body"?: string, //(Optional) String
+     *    "plaintext_body"?: string, //(Optional) String
+     *    "preheader"?: string, //(Optional) String
+     *    "tags"?: string, //(Optional) String
+     *    "should_inline_css"?: bool, //(Optional) Boolean
+     * } $queryParameters
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -8888,12 +8640,10 @@ class Client extends Runtime\Client\Client
      *
      * We have no hard limit on how long you can keep deprecated external IDs around, but we highly recommend removing them once there is no longer a need to reference users by the deprecated ID.
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -8954,12 +8704,10 @@ class Client extends Runtime\Client\Client
      *
      * - Rate limit hit (more than 1,000 requests per minute)
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -9011,12 +8759,10 @@ class Client extends Runtime\Client\Client
      * }
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -9067,12 +8813,10 @@ class Client extends Runtime\Client\Client
      *
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -9248,12 +8992,10 @@ class Client extends Runtime\Client\Client
      *
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -9564,12 +9306,10 @@ class Client extends Runtime\Client\Client
      *
      * Current limits based on expected ingestion can be found in the dashboard under **Settings** > **APIs and Identifiers** > **API limits**. We may modify rate limits to protect system stability or allow for increased data throughput on your account. Please contact Braze Support or your customer success manager for questions or concerns regarding hourly or per-second request limit and the needs of your business.
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -9635,12 +9375,10 @@ class Client extends Runtime\Client\Client
      *
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)
@@ -9803,12 +9541,10 @@ class Client extends Runtime\Client\Client
      * | `identifiers must be objects with an 'external_id' property that is a string, or 'user_alias' property that is an object` | Check the identifiers in your request. |
      * | `'merge_updates' must only have 'identifier_to_merge' and 'identifier_to_keep'` | Check that `merge_updates` only contains the two objects `identifier_to_merge` and `identifier_to_keep`. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
-     *
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return ($fetch is 'object' ? null : \Psr\Http\Message\ResponseInterface)

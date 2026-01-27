@@ -223,11 +223,10 @@ class PostTransactionalV1CampaignsByCampaignIdSend extends \Braze\Runtime\Client
      *
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(string $campaignId, ?\Braze\Model\TransactionalV1CampaignsCampaignIdSendPostBody $requestBody = null, array $headerParameters = [])
     {

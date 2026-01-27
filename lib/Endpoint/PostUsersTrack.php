@@ -308,11 +308,10 @@ class PostUsersTrack extends \Braze\Runtime\Client\BaseEndpoint implements \Braz
      *
      * Current limits based on expected ingestion can be found in the dashboard under **Settings** > **APIs and Identifiers** > **API limits**. We may modify rate limits to protect system stability or allow for increased data throughput on your account. Please contact Braze Support or your customer success manager for questions or concerns regarding hourly or per-second request limit and the needs of your business.
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(?\Braze\Model\UsersTrackPostBody $requestBody = null, array $headerParameters = [])
     {
