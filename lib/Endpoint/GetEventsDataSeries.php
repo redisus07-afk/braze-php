@@ -49,34 +49,31 @@ class GetEventsDataSeries extends \Braze\Runtime\Client\BaseEndpoint implements 
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
+     * @param array{
+     *    "event"?: string, //(Required) String
      *
-     * @var string $event (Required) String
-     *
-     * The name of the custom event for which to return analytics
-     * @var int $length (Required) Integer
+     * The name of the custom event for which to return analytics.
+     *    "length"?: int, //(Required) Integer
      *
      * Maximum number of units (days or hours) before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive).
-     * @var string $unit (Optional) String
+     *    "unit"?: string, //(Optional) String
      *
-     * Unit of time between data points - can be `day` or `hour`, defaults to `day`
-     * @var string $ending_at (Optional) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
+     * Unit of time between data points - can be `day` or `hour`, defaults to `day`.
+     *    "ending_at"?: string, //(Optional) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
      *
      * Date on which the data series should end. Defaults to time of the request.
-     * @var string $app_id (Optional) String
+     *    "app_id"?: string, //(Optional) String
      *
      * App API identifier retrieved from the [API Keys](https://www.braze.com/docs/user_guide/administrative/app_settings/api_settings_tab/) page to limit analytics to a specific app.
      *
      * Note: If you are using our [older navigation](https://www.braze.com/docs/navigation), `app_id` can be found at **Developer Console** > **API Settings**
-     * @var string $segment_id (Optional) String
+     *    "segment_id"?: string, //(Optional) String
      *
      * See [Segment API identifier](https://www.braze.com/docs/api/identifier_types/). Segment ID indicating the analytics-enabled segment for which event analytics should be returned.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(array $queryParameters = [], array $headerParameters = [])
     {

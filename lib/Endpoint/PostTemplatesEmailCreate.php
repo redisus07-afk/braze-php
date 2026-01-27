@@ -71,22 +71,19 @@ class PostTemplatesEmailCreate extends \Braze\Runtime\Client\BaseEndpoint implem
      * | Email must have valid Content Block names | The email might contain Content Blocks that don’t exist in this environment. |
      * | Invalid value for `should_inline_css`. One of `true` or `false` was expected | This parameter only accepts boolean values (true or false). Make sure the value for `should_inline_css` is not encapsulated in quotes (`""`), which causes the value to be sent as a string instead. |
      *
-     * @param array $queryParameters {
-     *
-     * @var string $template_name (Required) String
-     * @var string $subject (Required) String
-     * @var string $body (Required) String
-     * @var string $plaintext_body (Optional) String
-     * @var string $preheader (Optional) String
-     * @var string $tags (Optional) String
-     * @var bool   $should_inline_css (Optional) Boolean
-     *             }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "template_name"?: string, //(Required) String
+     *    "subject"?: string, //(Required) String
+     *    "body"?: string, //(Required) String
+     *    "plaintext_body"?: string, //(Optional) String
+     *    "preheader"?: string, //(Optional) String
+     *    "tags"?: string, //(Optional) String
+     *    "should_inline_css"?: bool, //(Optional) Boolean
+     * } $queryParameters
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(?\Braze\Model\TemplatesEmailCreatePostBody $requestBody = null, array $queryParameters = [], array $headerParameters = [])
     {

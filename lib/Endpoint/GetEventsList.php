@@ -48,17 +48,14 @@ class GetEventsList extends \Braze\Runtime\Client\BaseEndpoint implements \Braze
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
-     *
-     * @var int $page (Optional) Integer
+     * @param array{
+     *    "page"?: int, //(Optional) Integer
      *
      * The page of event names to return, defaults to 0 (returns the first set of up to 250).
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(array $queryParameters = [], array $headerParameters = [])
     {

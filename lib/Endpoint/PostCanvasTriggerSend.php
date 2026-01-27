@@ -61,11 +61,10 @@ class PostCanvasTriggerSend extends \Braze\Runtime\Client\BaseEndpoint implement
      *
      * > **Important:** Looking for the camaigns version of this endpoint? Check out [Sending campaign messages via API-triggered delivery](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/).
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(?\Braze\Model\CanvasTriggerSendPostBody $requestBody = null, array $headerParameters = [])
     {

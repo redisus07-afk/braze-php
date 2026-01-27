@@ -129,11 +129,10 @@ class PutCatalogsByCatalogNameItemByItemId extends \Braze\Runtime\Client\BaseEnd
      * | `too_deep_nesting_in_value_object` | Item objects can't have more than 50 levels of nesting. |
      * | `unable_to_coerce_value` | Item types can't be converted. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(string $catalogName, string $itemId, ?\Braze\Model\CatalogsCatalogNameItemsItemIdPutBody $requestBody = null, array $headerParameters = [])
     {

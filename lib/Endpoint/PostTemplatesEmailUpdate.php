@@ -84,23 +84,20 @@ class PostTemplatesEmailUpdate extends \Braze\Runtime\Client\BaseEndpoint implem
      * | Some tags could not be found | To add a tag when creating an email template, the tag must already exist in Braze. |
      * | Invalid value for `should_inline_css`. One of `true` or `false` was expected | This parameter only accepts boolean values (true or false). Make sure the value for `should_inline_css` is not encapsulated in quotes (`""`), which causes the value to be sent as a string instead. |
      *
-     * @param array $queryParameters {
-     *
-     * @var string $email_template_id (Required) String
-     * @var string $template_name (Optional) String
-     * @var string $subject (Optional) String
-     * @var string $body (Optional) String
-     * @var string $plaintext_body (Optional) String
-     * @var string $preheader (Optional) String
-     * @var string $tags (Optional) String
-     * @var bool   $should_inline_css (Optional) Boolean
-     *             }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "email_template_id"?: string, //(Required) String
+     *    "template_name"?: string, //(Optional) String
+     *    "subject"?: string, //(Optional) String
+     *    "body"?: string, //(Optional) String
+     *    "plaintext_body"?: string, //(Optional) String
+     *    "preheader"?: string, //(Optional) String
+     *    "tags"?: string, //(Optional) String
+     *    "should_inline_css"?: bool, //(Optional) Boolean
+     * } $queryParameters
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(?\Braze\Model\TemplatesEmailUpdatePostBody $requestBody = null, array $queryParameters = [], array $headerParameters = [])
     {

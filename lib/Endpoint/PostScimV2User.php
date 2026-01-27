@@ -85,12 +85,11 @@ class PostScimV2User extends \Braze\Runtime\Client\BaseEndpoint implements \Braz
      *
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $X-Request-Origin
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "X-Request-Origin"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(?\Braze\Model\ScimV2UsersPostBody $requestBody = null, array $headerParameters = [])
     {

@@ -105,11 +105,10 @@ class GetCatalogsByCatalogNameItemByItemId extends \Braze\Runtime\Client\BaseEnd
      * | `catalog-not-found` | Check that the catalog name is valid. |
      * | `item-not-found` | Check that the item is in the catalog. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(string $catalogName, string $itemId, array $headerParameters = [])
     {

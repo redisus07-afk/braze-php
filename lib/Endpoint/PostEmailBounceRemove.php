@@ -31,11 +31,10 @@ class PostEmailBounceRemove extends \Braze\Runtime\Client\BaseEndpoint implement
      * | --- | --- | --- | --- |
      * | `email` | Required | String or array | String email address to modify, or an array of up to 50 email addresses to modify. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(?\Braze\Model\EmailBounceRemovePostBody $requestBody = null, array $headerParameters = [])
     {

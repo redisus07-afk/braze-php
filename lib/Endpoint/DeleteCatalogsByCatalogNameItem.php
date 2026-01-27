@@ -104,11 +104,10 @@ class DeleteCatalogsByCatalogNameItem extends \Braze\Runtime\Client\BaseEndpoint
      * | `invalid-ids` | Item IDs can only include letters, numbers, hyphens, and underscores. |
      * | `request-includes-too-many-items` | Your request has too many items. The item limit per request is 50. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(string $catalogName, ?\Braze\Model\CatalogsCatalogNameItemsDeleteBody $requestBody = null, array $headerParameters = [])
     {

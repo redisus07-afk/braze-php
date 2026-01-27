@@ -64,17 +64,14 @@ class GetTemplatesEmailInfo extends \Braze\Runtime\Client\BaseEndpoint implement
      *
      * Images in this response will show in the `body` variable as HTML.
      *
-     * @param array $queryParameters {
-     *
-     * @var string $email_template_id (Required) String
+     * @param array{
+     *    "email_template_id"?: string, //(Required) String
      *
      * See [email template's API identifier](https://www.braze.com/docs/api/identifier_types/).
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(array $queryParameters = [], array $headerParameters = [])
     {

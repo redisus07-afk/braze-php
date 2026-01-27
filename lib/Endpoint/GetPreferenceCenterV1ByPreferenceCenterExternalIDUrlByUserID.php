@@ -60,16 +60,13 @@ class GetPreferenceCenterV1ByPreferenceCenterExternalIDUrlByUserID extends \Braz
      *
      *  ```
      *
-     * @param array $queryParameters {
-     *
-     * @var string $preference_center_api_id
-     * @var string $external_id (Required) String
-     *             }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "preference_center_api_id"?: string,
+     *    "external_id"?: string, //(Required) String
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(string $preferenceCenterExternalID, string $userID, array $queryParameters = [], array $headerParameters = [])
     {

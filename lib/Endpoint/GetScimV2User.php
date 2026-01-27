@@ -79,17 +79,14 @@ class GetScimV2User extends \Braze\Runtime\Client\BaseEndpoint implements \Braze
      *
      *  ```
      *
-     * @param array $queryParameters {
-     *
-     * @var string $filter
-     *             }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $X-Request-Origin
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "filter"?: string,
+     * } $queryParameters
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "X-Request-Origin"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(array $queryParameters = [], array $headerParameters = [])
     {

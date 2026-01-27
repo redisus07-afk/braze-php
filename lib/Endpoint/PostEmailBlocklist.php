@@ -31,11 +31,10 @@ class PostEmailBlocklist extends \Braze\Runtime\Client\BaseEndpoint implements \
      * | --- | --- | --- | --- |
      * | `email` | Required | String or array | String email address to blacklist, or an array of up to 50 email addresses to blocklist. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(?\Braze\Model\EmailBlocklistPostBody $requestBody = null, array $headerParameters = [])
     {

@@ -34,11 +34,10 @@ class PostEmailStatus extends \Braze\Runtime\Client\BaseEndpoint implements \Bra
      * | `email` | Required | String or array | String email address to modify, or an array of up to 50 email addresses to modify. |
      * | `subscription_state` | Required | String | Either “subscribed”, “unsubscribed”, or “opted_in”. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(?\Braze\Model\EmailStatusPostBody $requestBody = null, array $headerParameters = [])
     {

@@ -71,10 +71,9 @@ class GetPreferenceCenterV1List extends \Braze\Runtime\Client\BaseEndpoint imple
      *
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(array $headerParameters = [])
     {

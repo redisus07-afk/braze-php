@@ -45,23 +45,20 @@ class GetKpiUninstallsDataSeries extends \Braze\Runtime\Client\BaseEndpoint impl
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
-     *
-     * @var int $length (Required) Integer
+     * @param array{
+     *    "length"?: int, //(Required) Integer
      *
      * Maximum number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive).
-     * @var string $ending_at (Optional)  Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
+     *    "ending_at"?: string, //(Optional)  Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
      *
      * Date on which the data series should end. Defaults to time of the request.
-     * @var string $app_id (Optional) String
+     *    "app_id"?: string, //(Optional) String
      *
      * App API identifier retrieved from the [API Keys](https://www.braze.com/docs/user_guide/administrative/app_settings/api_settings_tab/) page. If excluded, results for all apps in the workspace will be returned.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(array $queryParameters = [], array $headerParameters = [])
     {

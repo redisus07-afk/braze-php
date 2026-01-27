@@ -95,11 +95,10 @@ class PostUsersExternalIdsRename extends \Braze\Runtime\Client\BaseEndpoint impl
      *
      * We have no hard limit on how long you can keep deprecated external IDs around, but we highly recommend removing them once there is no longer a need to reference users by the deprecated ID.
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(?\Braze\Model\UsersExternalIdsRenamePostBody $requestBody = null, array $headerParameters = [])
     {

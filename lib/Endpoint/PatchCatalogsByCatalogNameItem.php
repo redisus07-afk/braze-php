@@ -142,11 +142,10 @@ class PatchCatalogsByCatalogNameItem extends \Braze\Runtime\Client\BaseEndpoint 
      * | `too-deep-nesting-in-value-object` | Item objects can't have more than 50 levels of nesting. |
      * | `unable-to-coerce-value` | Item types can't be converted. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(string $catalogName, ?\Braze\Model\CatalogsCatalogNameItemsPatchBody $requestBody = null, array $headerParameters = [])
     {

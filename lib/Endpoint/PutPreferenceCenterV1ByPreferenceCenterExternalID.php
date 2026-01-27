@@ -71,11 +71,10 @@ class PutPreferenceCenterV1ByPreferenceCenterExternalID extends \Braze\Runtime\C
      *
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string-Type
-     * @var string
-     *                  }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(string $preferenceCenterExternalID, ?\Braze\Model\PreferenceCenterV1PreferenceCenterExternalIDPutBody $requestBody = null, array $headerParameters = [])
     {

@@ -79,32 +79,29 @@ class GetSmsInvalidPhoneNumber extends \Braze\Runtime\Client\BaseEndpoint implem
      *
      *  ```
      *
-     * @param array $queryParameters {
-     *
-     * @var string $start_date (Optional*) String in YYYY-MM-DD format
+     * @param array{
+     *    "start_date"?: string, //(Optional*) String in YYYY-MM-DD format
      *
      * Start date of the range to retrieve invalid phone numbers, must be earlier than `end_date`. This is treated as midnight in UTC time by the API.
-     * @var string $end_date (Optional*) String in YYYY-MM-DD format
+     *    "end_date"?: string, //(Optional*) String in YYYY-MM-DD format
      *
      * End date of the range to retrieve invalid phone numbers. This is treated as midnight in UTC time by the API.
-     * @var int $limit (Optional) Integer
+     *    "limit"?: int, //(Optional) Integer
      *
      * Optional field to limit the number of results returned. Defaults to 100, maximum is 500.
-     * @var int $offset (Optional) Integer
+     *    "offset"?: int, //(Optional) Integer
      *
-     * Optional beginning point in the list to retrieve from
-     * @var int $phone_numbers (Optional*) Array of Strings in e.164 format
+     * Optional beginning point in the list to retrieve from.
+     *    "phone_numbers"?: int, //(Optional*) Array of Strings in e.164 format
      *
      * If provided, we will return the phone number if it has been found to be invalid.
-     * @var string $reason (Optional) String
+     *    "reason"?: string, //(Optional) String
      *
      * Available values are “provider_error” (provider error indicates phone cannot receive SMS) or “deactivated” (phone number has been deactivated). If omitted, all reasons are returned.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(array $queryParameters = [], array $headerParameters = [])
     {

@@ -45,19 +45,16 @@ class GetSegmentsDetail extends \Braze\Runtime\Client\BaseEndpoint implements \B
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
-     *
-     * @var string $segment_id (Required) String
+     * @param array{
+     *    "segment_id"?: string, //(Required) String
      *
      * See [Segment API identifier](https://www.braze.com/docs/api/identifier_types/).
      *
      * The `segment_id` for a given segment can be found on the [API Keys](https://www.braze.com/docs/user_guide/administrative/app_settings/api_settings_tab/) page within your Braze account or you can use the [Export segment list endpoint](https://www.braze.com/docs/api/endpoints/export/get_segment/).
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(array $queryParameters = [], array $headerParameters = [])
     {

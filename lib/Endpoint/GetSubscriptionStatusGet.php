@@ -77,32 +77,29 @@ class GetSubscriptionStatusGet extends \Braze\Runtime\Client\BaseEndpoint implem
      *
      *  ```
      *
-     * @param array $queryParameters {
+     * @param array{
+     *    "subscription_group_id"?: string, //(Required) String
      *
-     * @var string $subscription_group_id (Required) String
-     *
-     * The `id` of your subscription group
-     * @var string $external_id (Required*) String
+     * The `id` of your subscription group.
+     *    "external_id"?: string, //(Required*) String
      *
      * The `external_id` of the user (must include at least one and at most 50 `external_ids`).
      *
      * When both an `external_id` and `email`/`phone` are submitted, only the `external_id`(s) provided will be applied to the result query.
-     * @var string $email (Required* ) String
+     *    "email"?: string, //(Required* ) String
      *
      * The email address of the user. It can be passed as an array of strings with a maximum of 50.
      *
      * Submitting both an email address and phone number (with no `external_id`) will result in an error.
-     * @var string $phone (Required*) String in [E.164](https://en.wikipedia.org/wiki/E.164) format
+     *    "phone"?: string, //(Required*) String in [E.164](https://en.wikipedia.org/wiki/E.164) format
      *
      * The phone number of the user. If email is not included, you must include at least one phone number (with a maximum of 50).
      *
      * Submitting both an email address and phone number (with no `external_id`) will result in an error.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(array $queryParameters = [], array $headerParameters = [])
     {

@@ -84,39 +84,36 @@ class GetCanvasDataSeries extends \Braze\Runtime\Client\BaseEndpoint implements 
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
-     *
-     * @var string $canvas_id (Required) String
+     * @param array{
+     *    "canvas_id"?: string, //(Required) String
      *
      * See [Canvas API Identifier](https://www.braze.com/docs/api/identifier_types/).
-     * @var string $ending_at (Required) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
+     *    "ending_at"?: string, //(Required) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
      *
      * Date on which the data export should end. Defaults to time of the request.
-     * @var string $starting_at (Optional*) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
+     *    "starting_at"?: string, //(Optional*) Datetime ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string)
      *
      * Date on which the data export should begin.
      *
      *Either `length` or `starting_at` is required.
-     * @var int $length (Optional*) String
+     *    "length"?: int, //(Optional*) String
      *
      * Maximum number of days before `ending_at` to include in the returned series. Must be between 1 and 14 (inclusive).
      *
      *Either `length` or `starting_at` is required.
-     * @var bool $include_variant_breakdown (Optional) Boolean
+     *    "include_variant_breakdown"?: bool, //(Optional) Boolean
      *
-     * Whether or not to include variant stats (defaults to false)
-     * @var bool $include_step_breakdown (Optional) Boolean
+     * Whether or not to include variant stats (defaults to false).
+     *    "include_step_breakdown"?: bool, //(Optional) Boolean
      *
-     * Whether or not to include step stats (defaults to false)
-     * @var bool $include_deleted_step_data (Optional) Boolean
+     * Whether or not to include step stats (defaults to false).
+     *    "include_deleted_step_data"?: bool, //(Optional) Boolean
      *
      * Whether or not to include step stats for deleted steps (defaults to false).
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(array $queryParameters = [], array $headerParameters = [])
     {

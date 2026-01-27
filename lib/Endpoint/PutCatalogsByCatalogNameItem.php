@@ -134,11 +134,10 @@ class PutCatalogsByCatalogNameItem extends \Braze\Runtime\Client\BaseEndpoint im
      * | `request_includes_too_many_items` | Your request has too many items. The item limit per request is 50. |
      * | `unable_to_coerce_value` | Item types can't be converted. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(string $catalogName, ?\Braze\Model\CatalogsCatalogNameItemsPutBody $requestBody = null, array $headerParameters = [])
     {

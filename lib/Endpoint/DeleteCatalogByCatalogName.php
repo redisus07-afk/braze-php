@@ -78,11 +78,10 @@ class DeleteCatalogByCatalogName extends \Braze\Runtime\Client\BaseEndpoint impl
      * | --- | --- |
      * | `catalog-not-found` | Check that the catalog name is valid. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(string $catalogName, array $headerParameters = [])
     {

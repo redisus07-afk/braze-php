@@ -56,11 +56,10 @@ class PostCanvasTriggerScheduleUpdate extends \Braze\Runtime\Client\BaseEndpoint
      * | `schedule_id` | Optional | String | The `schedule_id` to update (obtained from the response to create schedule). |
      * | `schedule` | Required | Object | See [schedule object](https://www.braze.com/docs/api/objects_filters/schedule_object/). |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(?\Braze\Model\CanvasTriggerScheduleUpdatePostBody $requestBody = null, array $headerParameters = [])
     {

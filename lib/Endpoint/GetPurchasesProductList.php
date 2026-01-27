@@ -39,17 +39,14 @@ class GetPurchasesProductList extends \Braze\Runtime\Client\BaseEndpoint impleme
      *
      * > **Tip:** For help with CSV and API exports, visit [Export troubleshooting](https://www.braze.com/docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
      *
-     * @param array $queryParameters {
-     *
-     * @var int $page (Optional) Integer
+     * @param array{
+     *    "page"?: int, //(Optional) Integer
      *
      * The page of your product list that you would like to view.
-     * }
-     *
-     * @param array $headerParameters {
-     *
-     * @var string $Authorization
-     *             }
+     * } $queryParameters
+     * @param array{
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(array $queryParameters = [], array $headerParameters = [])
     {

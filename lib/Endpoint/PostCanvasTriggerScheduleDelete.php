@@ -32,11 +32,10 @@ class PostCanvasTriggerScheduleDelete extends \Braze\Runtime\Client\BaseEndpoint
      * | `canvas_id` | Required | String | See [Canvas identifier](https://braze.com/docs/api/identifier_types/). |
      * | `schedule_id` | Required | String | The `schedule_id` to delete (obtained from the response to create schedule). |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(?\Braze\Model\CanvasTriggerScheduleDeletePostBody $requestBody = null, array $headerParameters = [])
     {

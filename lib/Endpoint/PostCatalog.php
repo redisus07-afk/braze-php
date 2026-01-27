@@ -183,11 +183,10 @@ class PostCatalog extends \Braze\Runtime\Client\BaseEndpoint implements \Braze\R
      * | `too-many-catalog-atoms` | You can only create one catalog per request. |
      * | `too-many-fields` | Number of fields limit is 30. |
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(?\Braze\Model\CatalogsPostBody $requestBody = null, array $headerParameters = [])
     {

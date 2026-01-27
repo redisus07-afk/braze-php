@@ -65,11 +65,10 @@ class PostMessagesScheduleUpdate extends \Braze\Runtime\Client\BaseEndpoint impl
      * }'
      *  ```
      *
-     * @param array $headerParameters {
-     *
-     * @var string $Content-Type
-     * @var string $Authorization
-     *             }
+     * @param array{
+     *    "Content-Type"?: string,
+     *    "Authorization"?: string,
+     * } $headerParameters
      */
     public function __construct(?\Braze\Model\MessagesScheduleUpdatePostBody $requestBody = null, array $headerParameters = [])
     {
